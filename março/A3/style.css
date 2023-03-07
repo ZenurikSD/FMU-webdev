@@ -12,19 +12,25 @@ header{
     background-color: rgb(216, 203, 187);
 }
 
-
 .box{
     padding: 6px 0px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.content-width{
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.txtbox{
+    width: 60vw;
+    padding: 1em;
 }
 
 li{
     display: inline;
     margin-right: 12px;
-}
-
-ul{
-    width: 50vw;
 }
