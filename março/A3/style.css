@@ -12,6 +12,7 @@ header{
     background-color: rgb(216, 203, 187);
 }
 
+/* Flex container*/
 .box{
     padding: 6px 0px;
     display: flex;
@@ -19,6 +20,7 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 
 .content-width{
     min-width: 200px;
