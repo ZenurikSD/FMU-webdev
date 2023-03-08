@@ -21,18 +21,25 @@ header{
     align-items: center;
 }
 
-
 .content-width{
     min-width: 200px;
     max-width: 500px;
 }
 
-.txtbox{
-    width: 60vw;
-    padding: 1em;
-}
+p{ padding: 1em; }
 
 li{
     display: inline;
     margin-right: 12px;
 }
+
+.form > input{
+    padding: 5px;
+    margin: 5px;
+    max-width: 200px;
+}
+    .txtfield{
+        background-color: rgb(211, 208, 206);
+        border-style: none;
+    }
+
