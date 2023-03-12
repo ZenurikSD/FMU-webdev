@@ -4,12 +4,17 @@ body{
     margin: 0px;
     background-color: antiquewhite;
     font-family:"Merriweather";
+    min-height: 500px;
 }
 
 h1, ul{ margin: 0px;}
 
-header{
-    background-color: rgb(216, 203, 187);
+.bg-section{ background-color: rgb(216, 203, 187); }
+
+
+.grid{
+    display: grid;
+    grid-template-rows: minmax(50px, auto) 1fr minmax(150px, auto);
 }
 
 /* Flex container*/
@@ -20,18 +25,13 @@ header{
     align-items: center;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: 95vw;
-    justify-content: center;
-}
-
 .content-width{
-    min-width: 200px;
-    max-width: 500px;
+    max-width: 600px;
 }
 
-p{ padding: 1em; }
+header {grid-area: 1}
+main   {grid-area: 2; padding: 0 6%;}
+footer {grid-row: 3}
 
 li{
     display: inline;
@@ -43,8 +43,7 @@ li{
     margin: 5px;
     max-width: 200px;
 }
-    .txtfield{
+    .form > .txtfield{
         background-color: rgb(211, 208, 206);
         border-style: none;
     }
-
