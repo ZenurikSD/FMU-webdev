@@ -13,12 +13,17 @@ header{
 }
 
 /* Flex container*/
-.box{
-    padding: 6px 0px;
+.flex-wrap-center{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 95vw;
+    justify-content: center;
 }
 
 .content-width{
