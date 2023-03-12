@@ -8,9 +8,9 @@
     <title>Oi</title>
 </head>
 
-<body class="grid">
+<body class="flex-rows">
     <!--Cabeçalho ============================ -->
-    <header class="flex-wrap-center bg-section">
+    <header class="flex-wrap center bg-section">
         <h1>ZNK</h1>
         <ul class="list">
             <li><a href="index.html">Home</a></li>
@@ -20,16 +20,11 @@
 
     <!--Corpo ================================ -->
     <main>
-        <section class="flex-wrap-center">
+        <section class="flex-rows center">
+            <h3>Lorem Ipsum</h3>
             <p class="content-width">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam saepe consequatur magnam laudantium ipsa neque, itaque deserunt cum eligendi soluta dolor id hic! Eligendi eius, eveniet iure nihil vitae dolorum.
             Perferendis numquam praesentium similique tempore eveniet provident harum error architecto minus iusto assumenda cum consequuntur odit officia accusantium delectus maxime hic, est suscipit quaerat esse voluptate! Aut quod dolores veritatis.</p>
-
-            <form action="" method="get" class="form">
-                <input type="text" name="nome" class="txtfield" placeholder="Nome">
-                <input type="text" name="email" class="txtfield" placeholder="E-mail"> <br>
-                <input type="text" name="RA" class="txtfield" placeholder="RA">
-                <input type="submit" value="Enviar">
-            </form>
+            
         </section>
 
         <hr class="content-width">
@@ -37,8 +32,17 @@
 
     <!--  [TO--DO] Links de contato, github e linkedin-->
 
-    <footer class="bg-section">
-        aaa
+    <footer class="bg-section flex-rows center">
+        <fieldset>
+            <form action="" method="get" class="form">
+                <input type="text" name="nome" class="txtfield" placeholder="Nome">
+                <input type="text" name="email" class="txtfield" placeholder="E-mail"> <br>
+                <input type="text" name="RA" class="txtfield" placeholder="RA">
+                <input type="submit" value="Enviar" class="submit">
+            </form>
+        </fieldset>
+
+        <p><b>Alisson Silva, RA: 1826277</b></p>
     </footer>
 
     

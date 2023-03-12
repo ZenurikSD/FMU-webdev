@@ -1,41 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
+.bg-section{ background-color: rgb(216, 203, 187); }
 body{
     margin: 0px;
     background-color: antiquewhite;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     min-height: 500px;
+    height: 100vh;
+}
+
+li{
+    display: inline;
+    margin-right: 12px;
 }
 
 h1, ul{ margin: 0px;}
+p { margin: 6px;}
 
-.bg-section{ background-color: rgb(216, 203, 187); }
-
-
-.grid{
-    display: grid;
-    grid-template-rows: minmax(50px, auto) 1fr minmax(150px, auto);
-}
-
-/* Flex container*/
-.flex-wrap-center{
+/* Flex containers*/
+.flex-wrap{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
+.flex-rows{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    .center{
+        justify-content: center;
+        align-items: center;
+    }
 
 .content-width{
     max-width: 600px;
 }
 
-header {grid-area: 1}
-main   {grid-area: 2; padding: 0 6%;}
-footer {grid-row: 3}
+header {height: 50px}
+main   {
+    flex: 1; 
+    height: 80vh;
+    padding: 0% 5%;
+}
+footer {
+    padding: 0% 5%;
+    max-height: auto;
+}
 
-li{
-    display: inline;
-    margin-right: 12px;
+fieldset{
+    margin: 10px;
 }
 
 .form > input{
@@ -44,6 +57,15 @@ li{
     max-width: 200px;
 }
     .form > .txtfield{
-        background-color: rgb(211, 208, 206);
-        border-style: none;
+        background-color: rgba(0, 0, 0, 0.097);
+        border: 2px solid black;
+        font-family: inherit;
     }
+
+    .form > .submit{
+        background-color: rgba(0, 0, 0, 0.234);
+        border: 2px solid black;
+        font-family: inherit;
+    }
+
+hr{ opacity: 50% }
