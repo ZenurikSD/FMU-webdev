@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.bg-section{ background-color: rgb(216, 203, 187); }
+body{
+    margin: 0px;
+    background-color: antiquewhite;
+    font-family: "Merriweather";
+    min-height: 500px;
+    height: 100vh;
+}
+
+li{
+    display: inline;
+    margin-right: 12px;
+}
+
+h1, ul{ margin: 0px;}
+p { margin: 6px;}
+
+/* Flex containers*/
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-rows{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    .center{
+        justify-content: center;
+        align-items: center;
+    }
+
+.content-width{
+    max-width: 600px;
+}
+
+header {height: 50px}
+main   {
+    flex: 1; 
+    height: 80vh;
+    padding: 0% 5%;
+}
+
+.image{
+    width: 50%;
+}
+
+footer {
+    padding: 0% 5%;
+    max-height: auto;
+}
+
+fieldset{
+    margin: 10px;
+}
+
+.form > input{
+    padding: 5px;
+    margin: 5px;
+    max-width: 200px;
+}
+    .form > .txtfield{
+        background-color: rgba(0, 0, 0, 0.097);
+        border: 2px solid black;
+        font-family: inherit;
+    }
+
+    .form > .submit{
+        background-color: rgba(0, 0, 0, 0.234);
+        border: 2px solid black;
+        font-family: inherit;
+    }
+
+hr{ opacity: 50% }

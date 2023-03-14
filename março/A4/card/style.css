@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+body{
+    font-family: "Fira Mono";
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 80vw 1fr;
+    grid-template-rows: 1fr 80vh 1fr;
+    grid-template-areas: '. . .'
+                         '. M .'
+                         '. . .';
+}
+
+.card{
+    grid-area: M;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.322);
+}
+
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    max-width: 500px;
+}
+
+.box{
+    margin: 1em;
+    border-bottom: 2px solid gray;
+    min-width: 300px;
+}
