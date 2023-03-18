@@ -1,35 +1,74 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+/*--Globais ------------------------------------- */
+*{ 
+    margin: 0px; 
+}
+
+p, b{
+    font-size: 9pt;
+}
 
 body{
     font-family: "Fira Mono";
+    height: 97vh;
 }
 
 .grid{
     display: grid;
     grid-template-columns: 1fr 80vw 1fr;
-    grid-template-rows: 1fr 80vh 1fr;
+    grid-template-rows: 1fr 40vh 1fr;
     grid-template-areas: '. . .'
                          '. M .'
                          '. . .';
-}
-
-.card{
-    grid-area: M;
-    padding: 10px;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.322);
 }
 
 .flex-wrap{
     display: flex;
     flex-wrap: wrap;
     height: fit-content;
+}
+
+
+/*-- Elementos ------------------------------------- */
+.card{
+    grid-area: M;
+    padding: 10px;
     max-width: 500px;
+    max-height: 550px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.322);
+
+    overflow-y: scroll;
+}
+
+.profile-img{
+    background-image: url("images/hilidri.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-width: 40px;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .box{
     margin: 1em;
-    border-bottom: 2px solid gray;
-    min-width: 300px;
+    padding: 0.5em;
+    border-bottom: 2px solid rgb(182, 182, 182);
+    border-radius: 3px;
+}
+
+
+/* Posicionamento ------------------------------------- */
+.center-self{
+    justify-self: center;
+    align-self: center;
 }
