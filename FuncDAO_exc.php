@@ -75,16 +75,17 @@ class FuncionarioDao
     function buscarPeloRe($re)
     {
         global $conn;
+
         $nome = "";
         $dataNascimento = "";
         $salario = 0.0;
-        $sql = "SELECT * FROM funcionario WHERE re=?";
-        $query = $conn->prepare($sql);
+
+        $query = $conn->prepare("SELECT * FROM funcionario WHERE re=?");
         $result = $query->bind_param("i", $re);
         $query->execute();
         $query->bind_result($re, $nome, $dataNascimento, $salario);
         if ($query->fetch()) {
             return new Funcionario($re, $nome, $dataNascimento, $salario);
         }
-    }
+    }   
 }
