@@ -1,6 +1,6 @@
 <?php
-include_once "../Funcionario.php";
-include_once "../Conexao.php";
+include_once "Funcionario.php";
+include_once "Conexao.php";
 
 class FuncionarioDao
 {
