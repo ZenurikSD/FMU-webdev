@@ -10,10 +10,10 @@
     <fieldset>
         <legend>Cadastro de funcionário</legend>
         <form action="cadastro.php" method="get">
-            <span>RE:</span> <input type="text" name="re"/><br/>
+            <span>RE:</span> <input type="text" name="ra"/><br/>
             <span>nome:</span> <input type="text" name="nome"/><br/>
-            <span>data nascimento:</span> <input type="text" name="dataNascimento"/><br/>
-            <span>salário:</span> <input type="text" name ="salario"/><br/>
+            <span>data nascimento:</span> <input type="text" name="dataInscricao"/><br/>
+            <span>salário:</span> <input type="text" name ="notafinal"/><br/>
 
             <input type = "submit" value="cadastrar"/>
         </form>
@@ -22,7 +22,7 @@
     <fieldset>
         <legend>Excluir funcionário</legend>
         <form action="excluir.php" method="post">
-            <span>RE: </span> <input type="text" name="re">
+            <span>RE: </span> <input type="text" name="ra">
 
             <button type="submit">Excluir</button>
 
@@ -32,7 +32,7 @@
     <fieldset>
         <legend>Buscar pelo RE</legend>
         <form action="buscar.php" method="post">
-            <span>RE: </span> <input type="text" name="re">
+            <span>RE: </span> <input type="text" name="ra">
 
             <button type="submit">Buscar</button>
         </form>

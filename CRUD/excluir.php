@@ -10,16 +10,16 @@
 
 <body>
     <?php
-    include_once "FuncDAO_exc.php";
-    include_once "../Funcionario.php";
+    include_once "AlunoDAO.php";
+    include_once "Aluno.php";
 
     global $conn;
 
-    $dao = new FuncionarioDao();
+    $dao = new AlunoDao();
 
-    $re = $_POST["re"];
+    $ra = $_POST["ra"];
     
-    $func = new Funcionario($re, null, null, null);
+    $func = new Aluno($ra, null, null, null);
 
     if ($dao->excluir($func))
     {

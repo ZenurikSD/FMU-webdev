@@ -8,22 +8,22 @@
 
 <body>
     <?php
-    include_once "../Funcionario.php";
-    include_once "FuncDAO_exc.php";
+    include_once "Aluno.php";
+    include_once "AlunoDAO.php";
 
-    $re = intval($_POST["re"]);
+    $ra = intval($_POST["ra"]);
     $nome = $_POST["nome"];
     $formato = "d/m/Y";
-    $dataNascimento = DateTime::createFromFormat($formato, $_POST["dataNascimento"]);
-    $salario = floatval($_POST["salario"]);
-    $funcionario = new Funcionario(
-        $re,
+    $dataInscricao = DateTime::createFromFormat($formato, $_POST["dataInscricao"]);
+    $notafinal = floatval($_POST["notafinal"]);
+    $aluno = new Aluno(
+        $ra,
         $nome,
-        $dataNascimento->format("Y-m-d"),
-        $salario
+        $dataInscricao->format("Y-m-d"),
+        $notafinal
     );
-    $dao = new FuncionarioDao();
-    if ($dao->alterar($funcionario)) {
+    $dao = new AlunoDao();
+    if ($dao->alterar($aluno)) {
         echo "Alterado";
     } else {
         echo "Não alterado";
