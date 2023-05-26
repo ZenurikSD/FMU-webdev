@@ -1,7 +1,7 @@
 <?php
 include_once "Aluno.php";
 
-$conn = new mysqli("localhost", "zenurik", "", "web");
+$conn = new mysqli("localhost", "user", "123", "crud");
 
 class AlunoDao
 {

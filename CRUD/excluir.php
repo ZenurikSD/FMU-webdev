@@ -23,7 +23,7 @@
 
     if ($dao->excluir($func))
     {
-        echo "Funcionário excluido";
+        echo "Aluno excluido";
     } else {
         echo "Erro";
     }

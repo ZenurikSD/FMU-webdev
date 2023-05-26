@@ -16,12 +16,14 @@
     $formato = "d/m/Y";
     $dataInscricao = DateTime::createFromFormat($formato, $_POST["dataInscricao"]);
     $notafinal = floatval($_POST["notafinal"]);
+
     $aluno = new Aluno(
         $ra,
         $nome,
         $dataInscricao->format("Y-m-d"),
         $notafinal
     );
+    
     $dao = new AlunoDao();
     if ($dao->alterar($aluno)) {
         echo "Alterado";
