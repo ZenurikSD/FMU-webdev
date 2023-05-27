@@ -18,12 +18,6 @@
             $nota = $_GET["notafinal"]
         )
 
-        # trazer as informações do html
-
-
-        # instanciar o aluno e o DAO
-
-
 
     ?>
 </body>
