@@ -16,9 +16,14 @@
             $nome = $_GET["nome"],
             $data = DateTime::createFromFormat('d/m/y', $_POST["dataInscricao"])->format("Y-m-d"),
             $nota = $_GET["notafinal"]
-        )
+        );
 
+        $dao = new AlunoDao();
 
+        if ($dao->inserir($aluno))
+        {
+            echo "<h4 class=\"center\">Aluno cadastrado com sucesso</h4>";
+        }
     ?>
 </body>
 </html>

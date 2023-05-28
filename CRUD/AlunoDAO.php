@@ -15,6 +15,7 @@ class AlunoDao
         $p4 = $aluno->getNotafinal();
         $sql->bind_param("issd", $p1, $p2, $p3, $p4);
         $sql->execute();
+        
         if ($sql->affected_rows > 0) {
             return true;
         }
