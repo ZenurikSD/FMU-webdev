@@ -2,3 +2,8 @@ span{
     display: inline-block;
     min-width: 120px;    
 }
+
+.list-frame{
+    width: 90vw;
+    max-height: 200px;
+}
