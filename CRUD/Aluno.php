@@ -2,15 +2,15 @@
 class Aluno{
     private $ra;
     private $nome;
-    private $dataInscricao;
+    private $dataEnvio;
     private $notafinal;
     
     //construtor
-    function __construct($ra, $nome, $dataInscricao, $notafinal)
+    function __construct($ra, $nome, $dataEnvio, $notafinal)
     {
         $this->ra = $ra;
         $this->nome = $nome;
-        $this->dataInscricao = $dataInscricao;
+        $this->dataEnvio = $dataEnvio;
         $this->notafinal = $notafinal;
     }
 
@@ -20,8 +20,8 @@ class Aluno{
     function getNome(){
         return $this->nome;
     }
-    function getDataInscricao(){
-        return $this->dataInscricao;
+    function getDataEnvio(){
+        return $this->dataEnvio;
     }
     function getNotafinal(){
         return $this->notafinal;
@@ -33,8 +33,8 @@ class Aluno{
     function setNome($nome){
         $this->nome = $nome;
     }
-    function setDataInscricao($dataInscricao){
-        $this->dataInscricao = $dataInscricao;
+    function setDataEnvio($dataEnvio){
+        $this->dataEnvio = $dataEnvio;
     }
     function setnotafinal($notafinal){
         $this->notafinal = $notafinal;

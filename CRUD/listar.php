@@ -18,8 +18,8 @@
                 <tr>
                     <th scope="col">RA</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Turma</th>
-                    <th scope="col">Data de início</th>
+                    <th scope="col">Envio</th>
+                    <th scope="col">Nota final</th>
                 </tr>
             </thead>
 
@@ -33,10 +33,13 @@
                     $lista = $dao->listar();
 
                     foreach ($lista as $aluno) {
+                        $ymd_data = DateTime::createFromFormat('Y-m-d', $aluno->getDataEnvio());
+                        $dmy_data = $ymd_data->format("d/m/Y");
+
                         echo "<tr>";
                         echo "<td>",$aluno->getRa(),"</td>";
                         echo "<td>",$aluno->getNome(),"</td>";
-                        echo "<td>",$aluno->getDataInscricao(),"</td>";
+                        echo "<td>",$dmy_data,"</td>";
                         echo "<td>",$aluno->getNotafinal(),"</td>";
                         echo "</tr>";
                     }

@@ -13,7 +13,7 @@
         include_once "Aluno.php";
         include_once "AlunoDAO.php";
 
-        $br_data = DateTime::createFromFormat("d/m/Y", $_POST["dataInscricao"]);
+        $br_data = DateTime::createFromFormat("d/m/Y", $_POST["dataEnvio"]);
 
         $aluno = new Aluno(
             $ra = intval($_POST["ra"]),

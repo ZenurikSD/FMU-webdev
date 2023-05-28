@@ -17,13 +17,13 @@
     $ra = intval($_POST["ra"]);
     $nome = $_POST["nome"];
     $formato = "d/m/Y";
-    $dataInscricao = DateTime::createFromFormat($formato, $_POST["dataInscricao"]);
+    $dataEnvio = DateTime::createFromFormat($formato, $_POST["dataEnvio"]);
     $notafinal = floatval($_POST["notafinal"]);
 
     $aluno = new Aluno(
         $ra,
         $nome,
-        $dataInscricao->format("Y-m-d"),
+        $dataEnvio->format("Y-m-d"),
         $notafinal
     );
     

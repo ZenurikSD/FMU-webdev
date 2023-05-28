@@ -11,7 +11,7 @@ class AlunoDao
         $sql = $conn->prepare("INSERT INTO Aluno VALUES(?,?,?,?)");
         $p1 = $aluno->getRa();
         $p2 = $aluno->getNome();
-        $p3 = $aluno->getDataInscricao();
+        $p3 = $aluno->getDataEnvio();
         $p4 = $aluno->getNotafinal();
         $sql->bind_param("issd", $p1, $p2, $p3, $p4);
         $sql->execute();
@@ -40,12 +40,12 @@ class AlunoDao
     {
         global $conn;
 
-        $string = "UPDATE Aluno SET nome = ?, dataInscricao = ?, notafinal = ? WHERE ra = ?";
+        $string = "UPDATE Aluno SET nome = ?, dataEnvio = ?, notafinal = ? WHERE ra = ?";
 
         $sql = $conn->prepare($string);
 
         $p1 = $aluno->getNome();
-        $p2 = $aluno->getDataInscricao();
+        $p2 = $aluno->getDataEnvio();
         $p3 = $aluno->getNotafinal();
         $p4 = $aluno->getRa();
 
@@ -68,7 +68,7 @@ class AlunoDao
             array_push($lista, new Aluno(
                 $row["ra"],
                 $row["nome"],
-                $row["dataInscricao"],
+                $row["dataEnvio"],
                 $row["notafinal"]
             ));
         return $lista;
@@ -79,15 +79,15 @@ class AlunoDao
         global $conn;
 
         $nome = "";
-        $dataInscricao = "";
+        $dataEnvio = "";
         $notafinal = 0.0;
 
         $query = $conn->prepare("SELECT * FROM Aluno WHERE ra=?");
         $result = $query->bind_param("i", $ra);
         $query->execute();
-        $query->bind_result($ra, $nome, $dataInscricao, $notafinal);
+        $query->bind_result($ra, $nome, $dataEnvio, $notafinal);
         if ($query->fetch()) {
-            return new Aluno($ra, $nome, $dataInscricao, $notafinal);
+            return new Aluno($ra, $nome, $dataEnvio, $notafinal);
         }
     }   
 }

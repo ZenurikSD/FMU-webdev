@@ -22,7 +22,7 @@
     $f = $dao->buscarPeloRa($ra);
 
     $formato = "Y-m-d";
-    $dataInscricao = DateTime::createFromFormat($formato, $f->getDataInscricao());
+    $dataEnvio = DateTime::createFromFormat($formato, $f->getDataEnvio());
     ?>
 
     <fieldset>
@@ -33,8 +33,8 @@
                 "<?php echo $f->getRa() ?>" /><br />
             <span>nome:</span> <input type="text" name="nome" value=
                 "<?php echo $f->getNome() ?>" /><br />
-            <span>Data de inscrição:</span> <input type="text" name="dataInscricao" value=
-                "<?php echo $dataInscricao->format("d/m/Y") ?>" /><br />
+            <span>Data de envio:</span> <input type="text" name="dataEnvio" value=
+                "<?php echo $dataEnvio->format("d/m/Y") ?>" /><br />
             <span>Nota final:</span> <input type="text" name="notafinal" value=
                 "<?php echo $f->getNotafinal() ?>" /><br />
 
