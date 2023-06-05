@@ -9,43 +9,40 @@
 
 <body>
     <section class="container-sm">
-
-        <div class="row row-cols-2 g-0 me-auto">
-            <div class="card shadow col-12 ">
-                <h4 class="card-header">Cadastro de aluno</h4>
-                <form class="card-body" action="cadastrar.php" method="POST">
-                    <span>RA:</span> <input class="form-label" type="text"name="ra"/><br/>
-                    <span>nome:</span> <input class="form-label" type="text"name="nome"/><br/>
-                    <span>Data de envio:</span> <input class="form-label" type="text"name="dataEnvio"/><br/>
-                    <span>Nota final:</span> <input class="form-label" type="text"name ="notafinal"/><br/>
-                    <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>
-                </form>
-            </div>
         
-        
-            <section class="card shadow col">
+        <section class="card shadow my-3">
+            <h4 class="card-header">Cadastro de aluno</h4>
+            <form class="card-body" action="cadastrar.php" method="POST">
+                <span>RA:</span> <input class="form-label" type="text"name="ra"/><br/>
+                <span>nome:</span> <input class="form-label" type="text"name="nome"/><br/>
+                <span>Data de envio:</span> <input class="form-label" type="text"name="dataEnvio"/><br/>
+                <span>Nota final:</span> <input class="form-label" type="text"name ="notafinal"/><br/>
+                <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>
+            </form>
+        </section >
+    
+    
+        <section class="d-flex">
+            <section class="card shadow me-2">
                 <h4 class="card-header">Excluir aluno</h4>
                 <form class="card-body" action="excluir.php" method="post">
                     <span>RA: </span> <input class="form-label" type="text"name="ra">
                     <button type="submit" class="btn btn-outline-secondary">Excluir</button>
                 </form>
             </section>
-        
-        
-            <section class="card shadow col">
+            <section class="card shadow ms-2">
                 <h4 class="card-header">Buscar pelo RA</h4>
                 <form class="card-body" action="buscar.php" method="post">
                     <span>RA: </span> <input class="form-label" type="text"name="ra">
                     <button type="submit" class="btn btn-outline-secondary">Buscar</button>
                 </form>
             </section>
-            
-        </div>
+        </section>
         <br>
 
         <div class="row">
             <h4>Lista de alunos</h4>
-            <iframe src="listar.php" frameborder="0" class="list-frame"></iframe>
+            <!-- <iframe src="listar.php" frameborder="0" class="list-frame"></iframe> -->
         </div>
     </section>
 
